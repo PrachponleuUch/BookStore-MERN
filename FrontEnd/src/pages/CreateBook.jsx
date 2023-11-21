@@ -5,7 +5,7 @@ import Spinner from '../components/spinner'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const CreateBooks = () => {
+const CreateBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
@@ -67,14 +67,12 @@ const CreateBooks = () => {
           </div>
           <button className='p-2 bg-sky-300 m-8' onClick={handleSaveBook}>Save</button>
         </div>
-      )
-
-      }
+      )}
     </div>
   )
 }
 
-export default CreateBooks
+export default CreateBook;
 
 
 
