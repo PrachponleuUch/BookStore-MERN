@@ -53,7 +53,7 @@ const ShowBook = () => {
           </div>
           <div className="my-4">
             <span className="text-xl mr-4 text-grey-500">About</span>
-            {book.about ? (<span>{book.about}</span>) : (<span>N/A</span>)}
+            {book.about ? <span>{book.about}</span> : <span>N/A</span>}
           </div>
           <div className="my-4">
             <span className="text-xl mr-4 text-grey-500">Created Time</span>

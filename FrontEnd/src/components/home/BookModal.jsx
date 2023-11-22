@@ -30,7 +30,7 @@ const BookModal = ({ book, onClose }) => {
         </div>
         <p className="mt-4">About</p>
         <p className="my-2 overflow-y-auto h-48">
-        {book.about ? (book.about) : (`N/A`)}
+          {book.about ? book.about : `N/A`}
         </p>
       </div>
     </div>

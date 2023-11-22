@@ -2,36 +2,38 @@ import express from "express";
 import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
-import booksRoute from "./routes/bookRoute.js" 
-import cors from 'cors';
+import booksRoute from "./routes/bookRoute.js";
+import cors from "cors";
 
 const app = express();
 
 //Middleware for parsing request body
 app.use(express.json());
-app.use(cors({
-  // origin: '',
-  // methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  // allowedHeaders: ['Content-Type']
-}));
+app.use(
+  cors({
+    // origin: '',
+    // methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    // allowedHeaders: ['Content-Type']
+  })
+);
 
 app.listen(PORT, () => {
-  console.log(`Port: ${PORT}`)
+  console.log(`Port: ${PORT}`);
 });
 
-//Route 
-app.get('/', (request, response) => {
+//Route
+app.get("/", (request, response) => {
   console.log(request);
-  return response.status(234).send('SUCCESSFUL');
+  return response.status(234).send("SUCCESSFUL");
 });
 
-app.use('/books', booksRoute);
+app.use("/books", booksRoute);
 
 mongoose
   .connect(mongoDBURL)
   .then(() => {
-    console.log("SUCCESS")
+    console.log("SUCCESS");
   })
   .catch((error) => {
-    console.log(error)
+    console.log(error);
   });
