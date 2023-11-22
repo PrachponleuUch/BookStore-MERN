@@ -9,6 +9,7 @@ import { useSnackbar } from 'notistack'
 const EditBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [about, setAbout] = useState('');
   const [publishYear, setPublishYear] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const EditBook = () => {
       setTitle(response.data.title);
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);
+      setAbout(response.data.about);
       setLoading(false);
     })
     .catch((error) => {
@@ -33,7 +35,8 @@ const EditBook = () => {
     const data = {
       title,
       author,
-      publishYear
+      publishYear,
+      about
     };
     setLoading(true)
     axios
@@ -81,6 +84,15 @@ const EditBook = () => {
               type='text' 
               value={publishYear} 
               onChange={(e) => setPublishYear(e.target.value)}
+              className='border-2 border-gray-500 px-4 py-2 w-full'
+            />
+          </div>
+          <div className='my-4'>
+            <label className='text-xl mr-4 text-grey-500'>About</label>
+            <input 
+              type='text' 
+              value={about} 
+              onChange={(e) => setAbout(e.target.value)}
               className='border-2 border-gray-500 px-4 py-2 w-full'
             />
           </div>

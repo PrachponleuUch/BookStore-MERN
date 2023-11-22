@@ -13,6 +13,10 @@ const bookSchema = mongoose.Schema(
     publishYear: {
       type: Number,
       required: true
+    },
+    about: {
+      type: String,
+      required: true
     }
   },
   {
