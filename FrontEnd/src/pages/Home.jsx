@@ -9,6 +9,7 @@ import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
 
+//Show all books
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);

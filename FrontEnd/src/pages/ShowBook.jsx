@@ -6,6 +6,7 @@ import BackButton from "../components/BackButton";
 import Spinner from "../components/spinner";
 import { useSnackbar } from "notistack";
 
+//Show a specific book details
 const ShowBook = () => {
   const [book, setBook] = useState([]);
   const { enqueueSnackbar } = useSnackbar();

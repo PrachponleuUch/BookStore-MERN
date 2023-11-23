@@ -4,6 +4,8 @@ import Spinner from "../components/spinner";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSnackbar } from "notistack";
+
+//For confirming book deleting
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();

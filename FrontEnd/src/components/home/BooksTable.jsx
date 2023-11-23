@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+
+//Show all books in a table format
 const BooksTable = ({ books }) => {
   return (
     <table className="w-full border-separate border-spacing-2">

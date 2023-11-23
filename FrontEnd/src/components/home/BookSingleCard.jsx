@@ -6,6 +6,8 @@ import { BsInfoCircle } from "react-icons/bs";
 import { BiUserCircle, BiShow } from "react-icons/bi";
 import { MdOutlineDelete } from "react-icons/md";
 import BookModal from "./BookModal";
+
+//Card display for each book
 const BookSingleCard = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
   return (
@@ -39,6 +41,7 @@ const BookSingleCard = ({ book }) => {
         <Link to={`/books/delete/${book._id}`}>
           <MdOutlineDelete className="text-2xl text-red-600 hover:text-black" />
         </Link>
+        {/* Show card's modal */}
       </div>
       {showModal && (
         <BookModal book={book} onClose={() => setShowModal(false)} />

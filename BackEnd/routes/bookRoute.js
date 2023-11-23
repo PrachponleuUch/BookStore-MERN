@@ -45,6 +45,7 @@ router.get("/", async (request, response) => {
   }
 });
 
+//Route for getting specific book by ID
 router.get("/:id", async (request, response) => {
   try {
     const { id } = request.params;
@@ -56,6 +57,7 @@ router.get("/:id", async (request, response) => {
   }
 });
 
+//Route for updating specific book by ID
 router.put("/:id", async (request, response) => {
   try {
     if (
@@ -83,6 +85,7 @@ router.put("/:id", async (request, response) => {
   }
 });
 
+//Route for deleting specific book by ID
 router.delete("/:id", async (request, response) => {
   try {
     const { id } = request.params;

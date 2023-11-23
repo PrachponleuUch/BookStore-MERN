@@ -2,6 +2,8 @@ import React from "react";
 import { PiBookOpenTextLight } from "react-icons/pi";
 import { BiUserCircle } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+
+//Modal for book's card
 const BookModal = ({ book, onClose }) => {
   return (
     <div

@@ -17,18 +17,21 @@ app.use(
   })
 );
 
+//Check to see if the port is working
 app.listen(PORT, () => {
   console.log(`Port: ${PORT}`);
 });
 
-//Route
+//Check to see if base route is working
 app.get("/", (request, response) => {
   console.log(request);
   return response.status(234).send("SUCCESSFUL");
 });
 
+//For route with '/books', use routes from booksRoute
 app.use("/books", booksRoute);
 
+//Check if DB connection is working
 mongoose
   .connect(mongoDBURL)
   .then(() => {
